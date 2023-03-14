@@ -10,6 +10,14 @@ module.exports = {
       white: "#fff",
       onHover: "#00C250",
     },
+    screens: {
+      xs: "360px",
+      sm: "640px",
+      md: "768px",
+      lg: "900px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
   },
   plugins: [],
 };

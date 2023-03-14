@@ -31,14 +31,14 @@ export default function Menu({ language }) {
       : [...menuItems[1].items];
 
   return (
-    <div className="flex gap-16 capitalize">
+    <div className="hidden gap-8 capitalize lg:flex lg:gap-16 ">
       {menu.map((item) =>
         item.subMenu ? (
           <div key={item.title}>
             <div
               onMouseEnter={hoverOn}
               onMouseOut={hoverOffDelay}
-              className="relative flex items-center hover:cursor-pointer"
+              className="relative flex items-center hover:cursor-pointer hover:text-onHover"
             >
               {item.title}
               <NavigationArrow open={hover} />
@@ -53,7 +53,11 @@ export default function Menu({ language }) {
             )}
           </div>
         ) : (
-          <Link key={item.title} href={item.link}>
+          <Link
+            key={item.title}
+            href={item.link}
+            className="hover:text-onHover"
+          >
             {item.title}
           </Link>
         )

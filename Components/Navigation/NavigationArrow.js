@@ -3,7 +3,7 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 export default function NavigationArrow({ open }) {
   return (
-    <div className="pointer-events-none">
+    <div className="flex items-center pointer-events-none">
       {open ? (
         <MdOutlineKeyboardArrowUp size={22} className="text-secondary " />
       ) : (

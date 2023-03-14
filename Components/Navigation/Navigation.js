@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Menu from "./Menu";
 import LanguageSelect from "./LanguageSelect";
+import HamburgerMenu from "./HamburgerMenu";
 
 export default function Navigation() {
   const router = useRouter();
@@ -26,7 +27,8 @@ export default function Navigation() {
 
   return (
     <div className=" bg-primary">
-      <div className="w-[1440px] h-24 m-auto flex items-center text-[18px] text-white justify-around ">
+      <div className="max-w-[1440px] h-24 m-auto flex items-center text-[18px] text-white justify-around ">
+        <HamburgerMenu language={language} />
         <Link passHref href="/">
           <Image
             src="/logo small.png"
@@ -36,7 +38,7 @@ export default function Navigation() {
           />
         </Link>
 
-        <div className="flex gap-20">
+        <div className="flex gap-12 lg:gap-20">
           <Menu language={language} />
           <LanguageSelect language={language} setLanguage={setLanguage} />
         </div>

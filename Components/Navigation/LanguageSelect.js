@@ -17,12 +17,12 @@ export default function LanguageSelect({ setLanguage, language }) {
     >
       <Image
         src={language === "LT" ? "/LT.jpg" : "/EN.jpg"}
-        alt="flag"
+        alt="current language flag"
         width={60}
         height={36}
         className="w-6 h-4 "
       />
-      <div className="flex w-10 gap-1 select-none ">
+      <div className="flex gap-1 select-none ">
         {language}
         <NavigationArrow open={open} />
         {open && (
