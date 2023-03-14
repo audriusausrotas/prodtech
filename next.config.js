@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-}
-
-module.exports = nextConfig
+  swcMinify: true,
+  images: {
+    domains: ["images.prismic.io", "prodtech.prismic.io"],
+  },
+  i18n: {
+    locales: ["lt", "en"],
+    defaultLocale: "lt",
+    localeDetection: false,
+  },
+};
