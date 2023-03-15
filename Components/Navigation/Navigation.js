@@ -27,7 +27,7 @@ export default function Navigation() {
 
   return (
     <div className=" bg-primary">
-      <div className="max-w-[1440px] h-24 m-auto flex items-center text-[18px] text-white justify-around ">
+      <div className="max-w-[1440px] h-24 m-auto flex items-center  text-white justify-around ">
         <HamburgerMenu language={language} />
         <Link passHref href="/">
           <Image

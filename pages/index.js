@@ -1,11 +1,7 @@
 import HomeMain from "../Components/Home/HomeMain";
 
 export default function Home({}) {
-  return (
-    <div>
-      <HomeMain />
-    </div>
-  );
+  return <HomeMain />;
 }
 
 export async function getStaticProps({ locale }) {

@@ -15,7 +15,7 @@ export default function SubMenu({
   }
   return (
     <div
-      className="flex flex-col p-4 overflow-hidden border-b rounded-md lg:absolute bg-gray2 lg:bg-primary top-15 border-gray1"
+      className="flex flex-col p-4 overflow-hidden text-lg border-b rounded-lg lg:absolute bg-gray2 lg:bg-primary top-15 border-gray1"
       onMouseEnter={!open ? clearTimer : () => {}}
       onMouseLeave={!open ? hoverOff : () => {}}
     >
@@ -28,7 +28,7 @@ export default function SubMenu({
         >
           {open && <FaCircle size={10} />}
           {item.title}
-          {!open && <BsArrowRightCircleFill size={28} />}
+          {!open && <BsArrowRightCircleFill size={18} />}
         </Link>
       ))}
     </div>
