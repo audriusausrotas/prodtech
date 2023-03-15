@@ -39,7 +39,7 @@ const data = [
 export default function Footer() {
   return (
     <div className="flex flex-col items-center text-lg text-white bg-primary">
-      <div className="max-w-[1440px] w-full py-8 flex justify-around items-end">
+      <div className="max-w-[1440px] w-full py-8 flex justify-around items-end gap-4 xs:max-sm:text-center">
         <div className=" w-fit">
           <div className="h-28 ">
             <Link passHref href="/">
@@ -60,9 +60,15 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        {data.map((item, index) => (
-          <FooterTab key={index} data={item} />
-        ))}
+        <div className="hidden lg:block">
+          <FooterTab data={data[0]} />
+        </div>
+        <div className="hidden lg:block">
+          <FooterTab data={data[1]} />
+        </div>
+        <div className="hidden sm:block">
+          <FooterTab data={data[2]} />
+        </div>
       </div>
       <div className="w-full border-t border-gray1 max-w-[1440px] text-center p-4">
         Prodtech Engineering © 2023 All rights reserved.

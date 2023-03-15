@@ -14,7 +14,7 @@ export const menuItems = [
       },
       { title: "galerija", link: "/gallery" },
       { title: "apie mus", link: "/about" },
-      { title: "contaktai", link: "/contacts" },
+      { title: "kontaktai", link: "/contacts" },
     ],
   },
   {

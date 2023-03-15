@@ -12,7 +12,7 @@ export default function LanguageSelect({ setLanguage, language }) {
 
   return (
     <div
-      className="relative flex items-center gap-2 cursor-pointer"
+      className="relative flex items-center gap-3 text-xl cursor-pointer"
       onClick={toggleDropdown}
     >
       <Image

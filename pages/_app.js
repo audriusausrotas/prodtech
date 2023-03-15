@@ -6,7 +6,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navigation />
-      <Component {...pageProps} />
+      <main className="w-full min-h-[70.9vh]">
+        <Component {...pageProps} />
+      </main>
       <Footer />
     </>
   );
