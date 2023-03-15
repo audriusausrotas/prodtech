@@ -43,7 +43,7 @@ export default function Menu({ language, open, setOpen }) {
               onClick={hoverToggle}
               onMouseEnter={!open ? hoverOn : () => {}}
               onMouseOut={!open ? hoverOffDelay : () => {}}
-              className="relative flex items-center px-6 py-3 border-b hover:cursor-pointer hover:text-onHover lg:p-0 lg:border-0 border-gray1"
+              className="relative flex items-center justify-between px-6 py-3 border-b hover:cursor-pointer hover:text-onHover lg:p-0 lg:border-0 border-gray1 lg:justify-start"
             >
               {item.title}
               <NavigationArrow open={hover} />
