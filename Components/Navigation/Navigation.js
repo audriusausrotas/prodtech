@@ -39,7 +39,9 @@ export default function Navigation() {
         </Link>
 
         <div className="flex gap-12 lg:gap-20">
-          <Menu language={language} />
+          <div className="hidden lg:flex">
+            <Menu language={language} />
+          </div>
           <LanguageSelect language={language} setLanguage={setLanguage} />
         </div>
       </div>

@@ -4,10 +4,14 @@ import { useState } from "react";
 import { menuItems } from "./MenuItems";
 import NavigationArrow from "./NavigationArrow";
 
-export default function Menu({ language }) {
+export default function Menu({ language, open, setOpen }) {
   const [hover, setHover] = useState(false);
 
   let submenu;
+
+  function hoverOn(e) {
+    setHover(true);
+  }
 
   function hoverOff() {
     setHover(false);
@@ -17,8 +21,8 @@ export default function Menu({ language }) {
     submenu = setTimeout(() => setHover(false), 100);
   }
 
-  function hoverOn() {
-    setHover(true);
+  function hoverToggle() {
+    setHover((prev) => !prev);
   }
 
   function clearTimer() {
@@ -31,14 +35,15 @@ export default function Menu({ language }) {
       : [...menuItems[1].items];
 
   return (
-    <div className="hidden gap-8 capitalize lg:flex lg:gap-16 ">
+    <div className="absolute left-0 flex flex-col w-2/3 overflow-hidden capitalize rounded-br-lg select-none lg:w-auto bg-gray2 lg:flex-row lg:gap-16 lg:static top-24 lg:bg-primary">
       {menu.map((item) =>
         item.subMenu ? (
           <div key={item.title}>
             <div
-              onMouseEnter={hoverOn}
-              onMouseOut={hoverOffDelay}
-              className="relative flex items-center hover:cursor-pointer hover:text-onHover"
+              onClick={hoverToggle}
+              onMouseEnter={!open ? hoverOn : () => {}}
+              onMouseOut={!open ? hoverOffDelay : () => {}}
+              className="relative flex items-center px-6 py-3 border-b hover:cursor-pointer hover:text-onHover lg:p-0 lg:border-0 border-gray1"
             >
               {item.title}
               <NavigationArrow open={hover} />
@@ -49,14 +54,17 @@ export default function Menu({ language }) {
                 setHover={setHover}
                 clearTimer={clearTimer}
                 hoverOff={hoverOff}
+                open={open}
+                setOpen={setOpen}
               />
             )}
           </div>
         ) : (
           <Link
+            onClick={setOpen}
             key={item.title}
             href={item.link}
-            className="hover:text-onHover"
+            className="px-6 py-2 border-b hover:text-onHover lg:p-0 lg:border-0 border-gray1 "
           >
             {item.title}
           </Link>

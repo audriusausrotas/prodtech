@@ -26,7 +26,7 @@ export default function LanguageSelect({ setLanguage, language }) {
         {language}
         <NavigationArrow open={open} />
         {open && (
-          <div className="absolute left-0 flex flex-col p-4 overflow-hidden rounded-md cursor-default w-30 bg-primary top-10">
+          <div className="absolute right-0 flex flex-col overflow-hidden rounded-b-md cursor-default  lg:bg-primary top-[60px] bg-gray2">
             <LanguageSelectItem
               value="LT"
               toggle={toggleDropdown}

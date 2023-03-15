@@ -6,8 +6,11 @@ module.exports = {
     colors: {
       primary: "#141414",
       secondary: "#00C250",
-      gray: "#686868",
+      gray1: "#686868",
+      gray2: "#333333",
       white: "#fff",
+      black: "#000",
+      black08: "rgba(0, 0, 0, 0.8)",
       onHover: "#00C250",
     },
     screens: {

@@ -1,21 +1,34 @@
 import Link from "next/link";
 import { BsArrowRightCircleFill } from "react-icons/bs";
+import { FaCircle } from "react-icons/fa";
 
-export default function SubMenu({ clearTimer, hoverOff, subMenu }) {
+export default function SubMenu({
+  clearTimer,
+  hoverOff,
+  subMenu,
+  open,
+  setOpen,
+}) {
+  function closeMenus() {
+    hoverOff();
+    open && setOpen();
+  }
   return (
     <div
-      className="absolute flex flex-col p-4 overflow-hidden rounded-md bg-primary top-15"
-      onMouseEnter={clearTimer}
-      onMouseLeave={hoverOff}
+      className="flex flex-col p-4 overflow-hidden border-b rounded-md lg:absolute bg-gray2 lg:bg-primary top-15 border-gray1"
+      onMouseEnter={!open ? clearTimer : () => {}}
+      onMouseLeave={!open ? hoverOff : () => {}}
     >
       {subMenu.map((item) => (
         <Link
           key={item.title}
+          onClick={closeMenus}
           href={item.link}
-          className="flex items-center justify-between gap-2 px-4 py-2 rounded-md hover:bg-onHover w- min-w-[20rem]"
+          className="flex items-center lg:justify-between gap-2 px-4 py-2 rounded-md hover:bg-onHover w- min-w-[20rem]"
         >
+          {open && <FaCircle size={10} />}
           {item.title}
-          <BsArrowRightCircleFill size={28} />
+          {!open && <BsArrowRightCircleFill size={28} />}
         </Link>
       ))}
     </div>

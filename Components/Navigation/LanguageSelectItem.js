@@ -8,7 +8,7 @@ export default function LanguageSelectItem({ value, toggle, setLanguage }) {
 
   return (
     <div
-      className="flex items-center w-20 gap-2 px-4 py-2 rounded-md cursor-pointer hover:bg-onHover"
+      className="flex items-center w-24 gap-2 px-5 py-2 cursor-pointer hover:bg-onHover"
       onClick={clickHandler}
     >
       <Image
