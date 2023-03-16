@@ -39,7 +39,7 @@ const data = [
 export default function Footer() {
   return (
     <div className="flex flex-col items-center text-lg text-white bg-primary">
-      <div className="max-w-[1440px] w-full py-8 flex justify-around items-end gap-4 xs:max-sm:text-center">
+      <div className="max-w-[1440px] w-full py-8 flex justify-around items-end gap-4 xs:max-sm:text-center flex-wrap">
         <div className=" w-fit">
           <div className="h-28 ">
             <Link passHref href="/">

@@ -15,7 +15,7 @@ export default function SubMenu({
   }
   return (
     <div
-      className="flex flex-col p-4 overflow-hidden text-lg border-b rounded-lg lg:absolute bg-gray2 lg:bg-primary top-15 border-gray1"
+      className="z-50 flex flex-col p-4 overflow-hidden text-lg border-b rounded-lg lg:absolute bg-gray2 lg:bg-primary top-15 border-gray1"
       onMouseEnter={!open ? clearTimer : () => {}}
       onMouseLeave={!open ? hoverOff : () => {}}
     >

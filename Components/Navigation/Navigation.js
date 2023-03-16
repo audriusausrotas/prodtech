@@ -26,7 +26,7 @@ export default function Navigation() {
   }, [language]);
 
   return (
-    <div className="sticky top-0 bg-primary">
+    <div className="sticky top-0 z-50 bg-primary">
       <div className="max-w-[1440px] h-24 m-auto flex items-center  text-white justify-around ">
         <HamburgerMenu language={language} />
         <Link passHref href="/">
