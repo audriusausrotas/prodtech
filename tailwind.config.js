@@ -6,6 +6,12 @@ module.exports = {
       boxShadow: {
         ms: "0 4px 20px 2px rgba(206, 206, 206, 0.9)",
       },
+      brightness: {
+        60: ".6",
+      },
+      saturate: {
+        60: ".6",
+      },
     },
     colors: {
       primary: "#141414",
