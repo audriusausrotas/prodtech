@@ -13,7 +13,7 @@ export default function GalleryCarousel({
       <img
         src={image}
         alt=""
-        className="relative object-cover w-full h-full pointer-events-none rounded-xl"
+        className="relative object-contain w-full h-full pointer-events-none rounded-xl"
       />
       <IoIosArrowDropleftCircle
         size={60}
@@ -28,8 +28,11 @@ export default function GalleryCarousel({
       <IoMdCloseCircle
         size={40}
         onClick={closeHandler}
-        className="absolute transition-all cursor-pointer hover:scale-125 top-10 right-10 text-secondary"
+        className="absolute transition-all cursor-pointer hover:scale-125 top-10 right-24 text-secondary"
       />
+      <div className="absolute text-2xl font-bold text-white top-24 left-1/2">
+        {image?.slice(-6)}
+      </div>
     </div>
   );
 }

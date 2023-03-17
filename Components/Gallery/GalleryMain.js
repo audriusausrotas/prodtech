@@ -1,30 +1,32 @@
 import { Images } from "./Images";
 import GalleryImage from "./GalleryImage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GalleryCarousel from "./GalleryCarousel";
 
 export default function GalleryMain() {
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(100000);
 
   function clickHandler(e) {
     setImage(e.target.id);
   }
 
   function closeHandler() {
-    setImage(null);
+    setImage(100000);
   }
 
   function nextHandler() {
-    setImage((prev) => +prev + 1);
+    Images[image + 1] ? setImage((prev) => +prev + 1) : setImage(0);
   }
 
   function prevHandler() {
-    setImage((prev) => +prev - 1);
+    Images[image - 1]
+      ? setImage((prev) => +prev - 1)
+      : setImage(Images.length - 1);
   }
 
   return (
     <>
-      {image ? (
+      {image !== 100000 ? (
         <GalleryCarousel
           image={Images[image]}
           closeHandler={closeHandler}
