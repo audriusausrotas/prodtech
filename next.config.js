@@ -4,6 +4,7 @@ module.exports = {
   swcMinify: true,
   images: {
     domains: ["images.prismic.io", "prodtech.prismic.io"],
+    path: "/",
   },
   i18n: {
     locales: ["lt", "en"],
