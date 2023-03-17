@@ -18,12 +18,12 @@ export default function GalleryCarousel({
       <IoIosArrowDropleftCircle
         size={60}
         onClick={prevHandler}
-        className="absolute transition-all cursor-pointer top-1/2 hover:scale-125 left-24 text-primary"
+        className="absolute transition-all cursor-pointer top-1/2 hover:scale-125 left-24 text-secondary"
       />
       <IoIosArrowDroprightCircle
         size={60}
         onClick={nextHandler}
-        className="absolute transition-all cursor-pointer hover:scale-125 top-1/2 right-24 text-primary"
+        className="absolute transition-all cursor-pointer hover:scale-125 top-1/2 right-24 text-secondary"
       />
       <IoMdCloseCircle
         size={40}

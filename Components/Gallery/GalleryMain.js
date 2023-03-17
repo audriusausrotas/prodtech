@@ -15,11 +15,11 @@ export default function GalleryMain() {
   }
 
   function nextHandler() {
-    setImage((prev) => prev + 1);
+    setImage((prev) => +prev + 1);
   }
 
   function prevHandler() {
-    setImage((prev) => prev - 1);
+    setImage((prev) => +prev - 1);
   }
 
   return (
