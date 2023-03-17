@@ -12,7 +12,7 @@ export default function ContactUsElement({ clickHandler, name }) {
             We are here to assist. Contact us via phone, email, or visit us at
             our main office.
           </div>
-          <Button name={name} onclick={clickHandler} />
+          <Button name={name} clickHandler={clickHandler} />
         </div>
       </div>
       <div className="w-full h-44 bg-primary"></div>
