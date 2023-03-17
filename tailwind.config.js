@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       boxShadow: {
         ms: "0 4px 20px 2px rgba(206, 206, 206, 0.9)",
+        s1: "0 4px 15px  #000",
       },
       brightness: {
         60: ".6",
