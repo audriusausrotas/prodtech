@@ -4,27 +4,27 @@ import Image from "next/image";
 
 const data = [
   {
-    title: "quick links",
+    title: "Greitos nuorodos",
     items: [
-      { title: "home", link: "/" },
-      { title: "gallery", link: "/gallery" },
-      { title: "about us", link: "/about" },
-      { title: "contacts", link: "/contacts" },
+      { title: "Pradžia", link: "/" },
+      { title: "Galerija", link: "/gallery" },
+      { title: "Apie Mus", link: "/about" },
+      { title: "Kontaktai", link: "/contacts" },
     ],
   },
   {
-    title: "services",
+    title: "Paslaugos",
     items: [
-      { title: "production", link: "/production" },
-      { title: "repair", link: "/repair" },
+      { title: "Projektavimas", link: "/designing" },
+      { title: "Gamyba", link: "/production" },
 
-      { title: "robotics", link: "/robotics" },
+      { title: "Automatika Ir Robotizavimas", link: "/automation" },
 
-      { title: "something", link: "/something" },
+      { title: "Remontas Ir Techninė Priežiūra", link: "/repair" },
     ],
   },
   {
-    title: "contact info",
+    title: "kontaktai",
     items: [
       {
         title: "Pasagų g. 4, Riešės k., LT-14265 Vilniaus r.",
@@ -53,17 +53,17 @@ export default function Footer() {
             </Link>
           </div>
           <div className="gap-1">
-            <div>PVM mokėtojo kodas: LT100010561112</div>
-            <div>Įmonės kodas: 304374938</div>
+            <div>PVM mokėtojo kodas: LT100015477019</div>
+            <div>Įmonės kodas: 306124100</div>
             <Link href="/privacy" className="hover:text-onHover">
               Privacy Policy
             </Link>
           </div>
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <FooterTab data={data[0]} />
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <FooterTab data={data[1]} />
         </div>
         <div className="hidden sm:block">

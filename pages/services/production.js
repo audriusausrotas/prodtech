@@ -1,5 +1,5 @@
-import React from "react";
+import ProductionMain from "@/Components/Components/Services/Production/ProductionMain";
 
 export default function production() {
-  return <div></div>;
+  return <ProductionMain />;
 }

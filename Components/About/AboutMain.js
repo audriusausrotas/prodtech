@@ -24,7 +24,7 @@ export default function AboutMain() {
           />
         </div>
       </div>
-      <div className="px-8 py-16">
+      <div className="px-8 py-20">
         <div className="max-w-[1440px] flex-col xl:flex-row flex gap-4 m-auto">
           <TextContainer
             heading="About Prodtech Engineering"

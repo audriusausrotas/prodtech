@@ -1,6 +1,6 @@
 import "../styles/globals.css";
-import Navigation from "../Components/Navigation/Navigation";
-import Footer from "../Components/Footer/Footer";
+import Navigation from "../Components/Layout/Navigation/Navigation";
+import Footer from "../Components/Layout/Footer/Footer";
 
 export default function App({ Component, pageProps }) {
   return (

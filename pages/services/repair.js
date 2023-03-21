@@ -1,5 +1,5 @@
-import React from "react";
+import RepairMain from "@/Components/Components/Services/Repair/RepairMain";
 
 export default function repair() {
-  return <div></div>;
+  return <RepairMain />;
 }
