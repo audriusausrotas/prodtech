@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ImageContainer() {
   return (
-    <div className="flex-1 order-last hidden xl:order-none sm:flex">
+    <div className="order-last hidden xl:order-none sm:flex">
       <div className="relative h-[630px] w-[550px] m-auto ">
         <Image
           src="/ap1.jpg"
