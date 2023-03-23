@@ -1,0 +1,16 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "type"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "size",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "movement",
+    "type": "Text"
+  }
+}

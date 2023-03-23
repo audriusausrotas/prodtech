@@ -1,0 +1,16 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "bill"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "quite",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "suppose",
+    "type": "Text"
+  }
+}

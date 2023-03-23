@@ -1,0 +1,65 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": ""
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "vat_code": {
+        "type": "Text",
+        "config": {
+          "label": "VAT code",
+          "placeholder": ""
+        }
+      },
+      "company_name": {
+        "type": "Text",
+        "config": {
+          "label": "Company Code",
+          "placeholder": ""
+        }
+      },
+      "privacy_link": {
+        "type": "Text",
+        "config": {
+          "label": "Privacy Link",
+          "placeholder": ""
+        }
+      },
+      "copyright": {
+        "type": "Text",
+        "config": {
+          "label": "copyright",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "footer_links": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Styles": {}
+  }
+}

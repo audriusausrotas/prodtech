@@ -1,6 +1,6 @@
 import { Images } from "./Images";
 import GalleryImage from "./GalleryImage";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import GalleryCarousel from "./GalleryCarousel";
 
 export default function GalleryMain() {

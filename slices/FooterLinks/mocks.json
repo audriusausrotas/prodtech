@@ -1,0 +1,36 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "feel",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "link",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "congress",
+              "type": "Text"
+            }
+          ],
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "nobody",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

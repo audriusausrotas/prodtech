@@ -1,0 +1,16 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "nation"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "sweet",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "review",
+    "type": "Text"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "trunk"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "plates",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "sit",
+    "type": "Text"
+  }
+}

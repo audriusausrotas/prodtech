@@ -1,7 +1,6 @@
 import Button from "../Components/Button";
 
 export default function ImageElement({ img }) {
-  console.log(img);
   return (
     <div className="relative h-full transition-all group">
       <img

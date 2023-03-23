@@ -1,0 +1,88 @@
+{
+  "id": "contacts",
+  "label": "Contacts",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "header": {
+        "type": "Text",
+        "config": {
+          "label": "Header",
+          "placeholder": ""
+        }
+      },
+      "short_text": {
+        "type": "Text",
+        "config": {
+          "label": "Short Text",
+          "placeholder": ""
+        }
+      },
+      "short_text_2": {
+        "type": "Text",
+        "config": {
+          "label": "Short Text 2",
+          "placeholder": ""
+        }
+      },
+      "map_link": {
+        "type": "Text",
+        "config": {
+          "label": "Map Link",
+          "placeholder": ""
+        }
+      },
+      "header_img": {
+        "type": "Image",
+        "config": {
+          "label": "Header Img",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "contact_list": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO": {
+      "seo_title": {
+        "type": "Text",
+        "config": {
+          "label": "SEO Title",
+          "placeholder": ""
+        }
+      },
+      "seo_description": {
+        "type": "Text",
+        "config": {
+          "label": "SEO Description",
+          "placeholder": ""
+        }
+      }
+    },
+    "Styles": {}
+  }
+}

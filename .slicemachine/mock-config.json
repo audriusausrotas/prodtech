@@ -1,0 +1,25 @@
+{
+  "_cts": {
+    "footer": {},
+    "home": {},
+    "gallery": {},
+    "contacts": {},
+    "about_us": {},
+    "designing": {},
+    "production": {},
+    "automation": {},
+    "repair": {}
+  },
+  "slices": {
+    "FooterLinks": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ContactList": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
+}

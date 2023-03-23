@@ -1,0 +1,16 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "question"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "toward",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "bee",
+    "type": "Text"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "gun"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "flight",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "rays",
+    "type": "Text"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "touch"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "dead",
+    "type": "Text"
+  },
+  "header": {
+    "__TYPE__": "FieldContent",
+    "value": "island",
+    "type": "Text"
+  },
+  "short_text": {
+    "__TYPE__": "FieldContent",
+    "value": "stomach",
+    "type": "Text"
+  },
+  "short_text_2": {
+    "__TYPE__": "FieldContent",
+    "value": "anything",
+    "type": "Text"
+  },
+  "map_link": {
+    "__TYPE__": "FieldContent",
+    "value": "medicine",
+    "type": "Text"
+  },
+  "header_img": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+      "width": 6000,
+      "height": 4000
+    },
+    "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+    "width": 6000,
+    "height": 4000,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "contact_list$94cf354f-45a0-462d-aff4-8dd0a46a8708",
+        "name": "contact_list",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "FieldContent",
+              "value": "silent",
+              "type": "Text"
+            },
+            "link": {
+              "__TYPE__": "FieldContent",
+              "value": "whatever",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "seo_title": {
+    "__TYPE__": "FieldContent",
+    "value": "thin",
+    "type": "Text"
+  },
+  "seo_description": {
+    "__TYPE__": "FieldContent",
+    "value": "across",
+    "type": "Text"
+  }
+}
