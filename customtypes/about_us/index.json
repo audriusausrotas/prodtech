@@ -8,23 +8,56 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "about",
+          "label": "UID",
           "placeholder": ""
+        }
+      },
+      "header_image": {
+        "type": "Image",
+        "config": {
+          "label": "Header Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": " Title",
+          "placeholder": ""
+        }
+      },
+      "text": {
+        "type": "Text",
+        "config": {
+          "label": "Text",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "about_template": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },
     "SEO": {
-      "title": {
+      "seo_title": {
         "type": "Text",
         "config": {
-          "label": "Title",
+          "label": "SEO Title",
           "placeholder": ""
         }
       },
-      "description": {
+      "seo_description": {
         "type": "Text",
         "config": {
-          "label": "Description",
+          "label": "SEO Description",
           "placeholder": ""
         }
       }

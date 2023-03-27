@@ -8,10 +8,10 @@ export default function Home({ footer, page }) {
   return (
     <>
       <Head>
-        {/* <title>{page.data.meta_title}</title>
-        <meta name="description" content={page.data.meta_description} /> */}
+        <title>{page.data.seo_title}</title>
+        <meta name="description" content={page.data.seo_description} />
       </Head>
-      <HomeMain />
+      <HomeMain data={page.data.slices} card={footer.data.contact_card[0]} />
       <Footer data={footer.data} />
     </>
   );
@@ -20,12 +20,12 @@ export default function Home({ footer, page }) {
 export async function getStaticProps({ locale }) {
   locale === "en" && (locale = "en-eu");
   const client = prismic.createClient(sm.apiEndpoint);
-  // const page = await client.getByUID("home", "home", { lang: locale });
+  const page = await client.getByUID("home", "home", { lang: locale });
   const footer = await client.getByUID("footer", "footer", { lang: locale });
 
   return {
     props: {
-      // page,
+      page,
       footer,
     },
   };

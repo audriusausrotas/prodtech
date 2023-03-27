@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer({ data }) {
   return (
     <div className="flex flex-col items-center text-lg text-white bg-primary">
-      <div className="max-w-[1440px] w-full py-20 md:py-8 flex justify-around items-end gap-4 sm:text-left text-center  flex-wrap">
+      <div className="max-w-[1440px] w-full py-20 md:py-8 flex justify-around items-end gap-4 xl:text-left text-center  flex-wrap">
         <div className=" w-fit">
           <div className="h-28 ">
             <Link passHref href="/">
@@ -21,8 +21,8 @@ export default function Footer({ data }) {
           <div className="gap-1">
             <div>{data.vat_code}</div>
             <div>{data.company_name}</div>
-            <Link href="/privacy" className="hover:text-onHover">
-              {data.privacy_link}
+            <Link href={data.privacy_link} className="hover:text-onHover">
+              {data.privacy_name}
             </Link>
           </div>
         </div>

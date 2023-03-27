@@ -1,0 +1,27 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "eight"
+  },
+  "data": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Sunt consequat magna adipisicing quis laboris et."
+        }
+      }
+    ]
+  },
+  "seo_title": {
+    "__TYPE__": "FieldContent",
+    "value": "play",
+    "type": "Text"
+  },
+  "seo_description": {
+    "__TYPE__": "FieldContent",
+    "value": "swing",
+    "type": "Text"
+  }
+}

@@ -1,19 +1,19 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "universe"
+    "value": "setting"
   },
   "logo": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
-      "width": 4000,
-      "height": 6000
+      "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
+      "width": 2545,
+      "height": 2545
     },
-    "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
-    "width": 4000,
-    "height": 6000,
+    "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
+    "width": 2545,
+    "height": 2545,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -26,29 +26,76 @@
   },
   "vat_code": {
     "__TYPE__": "FieldContent",
-    "value": "cold",
+    "value": "offer",
     "type": "Text"
   },
   "company_name": {
     "__TYPE__": "FieldContent",
-    "value": "then",
+    "value": "liquid",
+    "type": "Text"
+  },
+  "privacy_name": {
+    "__TYPE__": "FieldContent",
+    "value": "themselves",
     "type": "Text"
   },
   "privacy_link": {
     "__TYPE__": "FieldContent",
-    "value": "built",
+    "value": "war",
     "type": "Text"
   },
   "copyright": {
     "__TYPE__": "FieldContent",
-    "value": "rising",
+    "value": "cloud",
     "type": "Text"
+  },
+  "contact_card": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "title",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "bush",
+              "type": "Text"
+            }
+          ],
+          [
+            "text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "composition",
+              "type": "Text"
+            }
+          ],
+          [
+            "button_name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "partly",
+              "type": "Text"
+            }
+          ],
+          [
+            "button_link",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "doll",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "footer_links$c94ee331-f0a6-4a80-92b7-526d062921be",
+        "key": "footer_links$079eee57-cc7b-4e0f-a71d-c35579117d29",
         "name": "footer_links",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -56,7 +103,7 @@
           "primary": {
             "title": {
               "__TYPE__": "FieldContent",
-              "value": "street",
+              "value": "flow",
               "type": "Text"
             }
           },
@@ -65,10 +112,18 @@
               "__TYPE__": "GroupItemContent",
               "value": [
                 [
+                  "name",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "newspaper",
+                    "type": "Text"
+                  }
+                ],
+                [
                   "link",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "luck",
+                    "value": "bent",
                     "type": "Text"
                   }
                 ]

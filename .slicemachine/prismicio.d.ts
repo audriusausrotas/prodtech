@@ -9,28 +9,77 @@ type Simplify<T> = {
 /** Content for About Us documents */
 interface AboutUsDocumentData {
     /**
-     * Title field in *About Us*
+     * Header Image field in *About Us*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_us.header_image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    header_image: prismicT.ImageField<never>;
+    /**
+     *  Title field in *About Us*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
      * - **API ID Path**: about_us.title
-     * - **Tab**: SEO
+     * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
     title: prismicT.KeyTextField;
     /**
-     * Description field in *About Us*
+     * Text field in *About Us*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: about_us.description
+     * - **API ID Path**: about_us.text
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+    /**
+     * Slice Zone field in *About Us*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_us.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<AboutUsDocumentDataSlicesSlice>;
+    /**
+     * SEO Title field in *About Us*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_us.seo_title
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    description: prismicT.KeyTextField;
+    seo_title: prismicT.KeyTextField;
+    /**
+     * SEO Description field in *About Us*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_us.seo_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    seo_description: prismicT.KeyTextField;
 }
+/**
+ * Slice for *About Us → Slice Zone*
+ *
+ */
+type AboutUsDocumentDataSlicesSlice = AboutTemplateSlice;
 /**
  * About Us document from Prismic
  *
@@ -41,41 +90,6 @@ interface AboutUsDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type AboutUsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<AboutUsDocumentData>, "about_us", Lang>;
-/** Content for Automation documents */
-interface AutomationDocumentData {
-    /**
-     * Title field in *Automation*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: automation.title
-     * - **Tab**: SEO
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    title: prismicT.KeyTextField;
-    /**
-     * Description field in *Automation*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: automation.description
-     * - **Tab**: SEO
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    description: prismicT.KeyTextField;
-}
-/**
- * Automation document from Prismic
- *
- * - **API ID**: `automation`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type AutomationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<AutomationDocumentData>, "automation", Lang>;
 /** Content for Contacts documents */
 interface ContactsDocumentData {
     /**
@@ -193,41 +207,6 @@ type ContactsDocumentDataSlicesSlice = ContactListSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type ContactsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ContactsDocumentData>, "contacts", Lang>;
-/** Content for Designing documents */
-interface DesigningDocumentData {
-    /**
-     * Title field in *Designing*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: designing.title
-     * - **Tab**: SEO
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    title: prismicT.KeyTextField;
-    /**
-     * Description field in *Designing*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: designing.description
-     * - **Tab**: SEO
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    description: prismicT.KeyTextField;
-}
-/**
- * Designing document from Prismic
- *
- * - **API ID**: `designing`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type DesigningDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<DesigningDocumentData>, "designing", Lang>;
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
@@ -264,6 +243,17 @@ interface FooterDocumentData {
      */
     company_name: prismicT.KeyTextField;
     /**
+     * Privacy Name field in *Footer*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.privacy_name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    privacy_name: prismicT.KeyTextField;
+    /**
      * Privacy Link field in *Footer*
      *
      * - **Field Type**: Text
@@ -286,6 +276,17 @@ interface FooterDocumentData {
      */
     copyright: prismicT.KeyTextField;
     /**
+     * Contact Card field in *Footer*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.contact_card[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    contact_card: prismicT.GroupField<Simplify<FooterDocumentDataContactCardItem>>;
+    /**
      * Slice Zone field in *Footer*
      *
      * - **Field Type**: Slice Zone
@@ -296,6 +297,52 @@ interface FooterDocumentData {
      *
      */
     slices: prismicT.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+/**
+ * Item in Footer → Contact Card
+ *
+ */
+export interface FooterDocumentDataContactCardItem {
+    /**
+     * Title field in *Footer → Contact Card*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.contact_card[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Text field in *Footer → Contact Card*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.contact_card[].text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+    /**
+     * Button Name field in *Footer → Contact Card*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.contact_card[].button_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button_name: prismicT.KeyTextField;
+    /**
+     * Button Link field in *Footer → Contact Card*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.contact_card[].button_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button_link: prismicT.KeyTextField;
 }
 /**
  * Slice for *Footer → Slice Zone*
@@ -315,28 +362,44 @@ export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocum
 /** Content for Gallery documents */
 interface GalleryDocumentData {
     /**
-     * Title field in *Gallery*
+     * Slice Zone field in *Gallery*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
-     * - **API ID Path**: gallery.title
-     * - **Tab**: SEO
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **API ID Path**: gallery.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
      *
      */
-    title: prismicT.KeyTextField;
+    slices: prismicT.SliceZone<GalleryDocumentDataSlicesSlice>;
     /**
-     * Description field in *Gallery*
+     * SEO Title field in *Gallery*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: gallery.description
+     * - **API ID Path**: gallery.seo_title
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    description: prismicT.KeyTextField;
+    seo_title: prismicT.KeyTextField;
+    /**
+     * SEO Description field in *Gallery*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: gallery.seo_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    seo_description: prismicT.KeyTextField;
 }
+/**
+ * Slice for *Gallery → Slice Zone*
+ *
+ */
+type GalleryDocumentDataSlicesSlice = GalleryImagesSlice;
 /**
  * Gallery document from Prismic
  *
@@ -350,28 +413,44 @@ export type GalleryDocument<Lang extends string = string> = prismicT.PrismicDocu
 /** Content for Home documents */
 interface HomeDocumentData {
     /**
-     * Title field in *Home*
+     * Slice Zone field in *Home*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
-     * - **API ID Path**: home.title
-     * - **Tab**: SEO
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **API ID Path**: home.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
      *
      */
-    title: prismicT.KeyTextField;
+    slices: prismicT.SliceZone<HomeDocumentDataSlicesSlice>;
     /**
-     * Description field in *Home*
+     * SEO Title field in *Home*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: home.description
+     * - **API ID Path**: home.seo_title
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    description: prismicT.KeyTextField;
+    seo_title: prismicT.KeyTextField;
+    /**
+     * SEO Description field in *Home*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.seo_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    seo_description: prismicT.KeyTextField;
 }
+/**
+ * Slice for *Home → Slice Zone*
+ *
+ */
+type HomeDocumentDataSlicesSlice = HeadersSlice | AboutTemplateSlice | ServicesItemsSlice | GalleryItemsSlice;
 /**
  * Home document from Prismic
  *
@@ -382,77 +461,212 @@ interface HomeDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
-/** Content for Production documents */
-interface ProductionDocumentData {
+/** Content for Privacy documents */
+interface PrivacyDocumentData {
     /**
-     * Title field in *Production*
+     * Data field in *Privacy*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: privacy.data
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    data: prismicT.RichTextField;
+    /**
+     * SEO Title field in *Privacy*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: production.title
+     * - **API ID Path**: privacy.seo_title
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    title: prismicT.KeyTextField;
+    seo_title: prismicT.KeyTextField;
     /**
-     * Description field in *Production*
+     * SEO Description field in *Privacy*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: production.description
+     * - **API ID Path**: privacy.seo_description
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    description: prismicT.KeyTextField;
+    seo_description: prismicT.KeyTextField;
 }
 /**
- * Production document from Prismic
+ * Privacy document from Prismic
  *
- * - **API ID**: `production`
+ * - **API ID**: `privacy`
  * - **Repeatable**: `false`
  * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type ProductionDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ProductionDocumentData>, "production", Lang>;
-/** Content for Repair documents */
-interface RepairDocumentData {
+export type PrivacyDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PrivacyDocumentData>, "privacy", Lang>;
+/** Content for Services Default Page documents */
+interface ServicesDefaultPageDocumentData {
     /**
-     * Title field in *Repair*
+     * Image field in *Services Default Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_default_page.image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Title field in *Services Default Page*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: repair.title
-     * - **Tab**: SEO
+     * - **API ID Path**: services_default_page.title
+     * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
     title: prismicT.KeyTextField;
     /**
-     * Description field in *Repair*
+     * Text field in *Services Default Page*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: repair.description
+     * - **API ID Path**: services_default_page.text
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+    /**
+     * Slice Zone field in *Services Default Page*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_default_page.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<ServicesDefaultPageDocumentDataSlicesSlice>;
+    /**
+     * SEO Title field in *Services Default Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_default_page.seo_title
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    description: prismicT.KeyTextField;
+    seo_title: prismicT.KeyTextField;
+    /**
+     * SEO Description field in *Services Default Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_default_page.seo_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    seo_description: prismicT.KeyTextField;
 }
 /**
- * Repair document from Prismic
+ * Slice for *Services Default Page → Slice Zone*
  *
- * - **API ID**: `repair`
- * - **Repeatable**: `false`
+ */
+type ServicesDefaultPageDocumentDataSlicesSlice = ServicesLayoutSlice;
+/**
+ * Services Default Page document from Prismic
+ *
+ * - **API ID**: `services_default_page`
+ * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type RepairDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<RepairDocumentData>, "repair", Lang>;
-export type AllDocumentTypes = AboutUsDocument | AutomationDocument | ContactsDocument | DesigningDocument | FooterDocument | GalleryDocument | HomeDocument | ProductionDocument | RepairDocument;
+export type ServicesDefaultPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ServicesDefaultPageDocumentData>, "services_default_page", Lang>;
+export type AllDocumentTypes = AboutUsDocument | ContactsDocument | FooterDocument | GalleryDocument | HomeDocument | PrivacyDocument | ServicesDefaultPageDocument;
+/**
+ * Primary content in AboutTemplate → Primary
+ *
+ */
+interface AboutTemplateSliceDefaultPrimary {
+    /**
+     * Info field in *AboutTemplate → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_template.primary.info
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    info: prismicT.KeyTextField;
+    /**
+     * Title field in *AboutTemplate → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_template.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Text field in *AboutTemplate → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_template.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+}
+/**
+ * Item in AboutTemplate → Items
+ *
+ */
+export interface AboutTemplateSliceDefaultItem {
+    /**
+     * Image field in *AboutTemplate → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_template.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for AboutTemplate Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `AboutTemplate`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutTemplateSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<AboutTemplateSliceDefaultPrimary>, Simplify<AboutTemplateSliceDefaultItem>>;
+/**
+ * Slice variation for *AboutTemplate*
+ *
+ */
+type AboutTemplateSliceVariation = AboutTemplateSliceDefault;
+/**
+ * AboutTemplate Shared Slice
+ *
+ * - **API ID**: `about_template`
+ * - **Description**: `AboutTemplate`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutTemplateSlice = prismicT.SharedSlice<"about_template", AboutTemplateSliceVariation>;
 /**
  * Primary content in ContactList → Primary
  *
@@ -567,11 +781,358 @@ type FooterLinksSliceVariation = FooterLinksSliceDefault;
  *
  */
 export type FooterLinksSlice = prismicT.SharedSlice<"footer_links", FooterLinksSliceVariation>;
+/**
+ * Item in GalleryImages → Items
+ *
+ */
+export interface GalleryImagesSliceDefaultItem {
+    /**
+     * Image field in *GalleryImages → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: gallery_images.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for GalleryImages Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `GalleryImages`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GalleryImagesSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<GalleryImagesSliceDefaultItem>>;
+/**
+ * Slice variation for *GalleryImages*
+ *
+ */
+type GalleryImagesSliceVariation = GalleryImagesSliceDefault;
+/**
+ * GalleryImages Shared Slice
+ *
+ * - **API ID**: `gallery_images`
+ * - **Description**: `GalleryImages`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GalleryImagesSlice = prismicT.SharedSlice<"gallery_images", GalleryImagesSliceVariation>;
+/**
+ * Primary content in GalleryItems → Primary
+ *
+ */
+interface GalleryItemsSliceDefaultPrimary {
+    /**
+     * Info field in *GalleryItems → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: gallery_items.primary.info
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    info: prismicT.KeyTextField;
+    /**
+     * Title field in *GalleryItems → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: gallery_items.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
+/**
+ * Item in GalleryItems → Items
+ *
+ */
+export interface GalleryItemsSliceDefaultItem {
+    /**
+     * Gallery Image field in *GalleryItems → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: gallery_items.items[].gallery_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    gallery_image: prismicT.ImageField<never>;
+    /**
+     * Gallery Link field in *GalleryItems → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: gallery_items.items[].gallery_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    gallery_link: prismicT.KeyTextField;
+    /**
+     * Link Name field in *GalleryItems → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: gallery_items.items[].link_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link_name: prismicT.KeyTextField;
+}
+/**
+ * Default variation for GalleryItems Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `GalleryItems`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GalleryItemsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<GalleryItemsSliceDefaultPrimary>, Simplify<GalleryItemsSliceDefaultItem>>;
+/**
+ * Slice variation for *GalleryItems*
+ *
+ */
+type GalleryItemsSliceVariation = GalleryItemsSliceDefault;
+/**
+ * GalleryItems Shared Slice
+ *
+ * - **API ID**: `gallery_items`
+ * - **Description**: `GalleryItems`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GalleryItemsSlice = prismicT.SharedSlice<"gallery_items", GalleryItemsSliceVariation>;
+/**
+ * Primary content in Headers → Primary
+ *
+ */
+interface HeadersSliceDefaultPrimary {
+    /**
+     * Image field in *Headers → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: headers.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Header field in *Headers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: headers.primary.header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    header: prismicT.KeyTextField;
+    /**
+     * Text field in *Headers → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: headers.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Headers Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Headers`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeadersSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeadersSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Headers*
+ *
+ */
+type HeadersSliceVariation = HeadersSliceDefault;
+/**
+ * Headers Shared Slice
+ *
+ * - **API ID**: `headers`
+ * - **Description**: `Headers`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeadersSlice = prismicT.SharedSlice<"headers", HeadersSliceVariation>;
+/**
+ * Primary content in ServicesItems → Primary
+ *
+ */
+interface ServicesItemsSliceDefaultPrimary {
+    /**
+     * Info field in *ServicesItems → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_items.primary.info
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    info: prismicT.KeyTextField;
+    /**
+     * Title field in *ServicesItems → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_items.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
+/**
+ * Item in ServicesItems → Items
+ *
+ */
+export interface ServicesItemsSliceDefaultItem {
+    /**
+     * Item Picture field in *ServicesItems → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_items.items[].item_picture
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    item_picture: prismicT.ImageField<never>;
+    /**
+     * Item Title field in *ServicesItems → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_items.items[].item_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item_title: prismicT.KeyTextField;
+    /**
+     * Item Link field in *ServicesItems → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_items.items[].item_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item_link: prismicT.KeyTextField;
+}
+/**
+ * Default variation for ServicesItems Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ServicesItems`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ServicesItemsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ServicesItemsSliceDefaultPrimary>, Simplify<ServicesItemsSliceDefaultItem>>;
+/**
+ * Slice variation for *ServicesItems*
+ *
+ */
+type ServicesItemsSliceVariation = ServicesItemsSliceDefault;
+/**
+ * ServicesItems Shared Slice
+ *
+ * - **API ID**: `services_items`
+ * - **Description**: `ServicesItems`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ServicesItemsSlice = prismicT.SharedSlice<"services_items", ServicesItemsSliceVariation>;
+/**
+ * Primary content in ServicesLayout → Primary
+ *
+ */
+interface ServicesLayoutSliceDefaultPrimary {
+    /**
+     * Image field in *ServicesLayout → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_layout.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Title field in *ServicesLayout → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_layout.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Text field in *ServicesLayout → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_layout.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+    /**
+     * Button Name field in *ServicesLayout → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_layout.primary.button_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button_name: prismicT.KeyTextField;
+    /**
+     * Button Link field in *ServicesLayout → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: services_layout.primary.button_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button_link: prismicT.KeyTextField;
+}
+/**
+ * Default variation for ServicesLayout Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ServicesLayout`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ServicesLayoutSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ServicesLayoutSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *ServicesLayout*
+ *
+ */
+type ServicesLayoutSliceVariation = ServicesLayoutSliceDefault;
+/**
+ * ServicesLayout Shared Slice
+ *
+ * - **API ID**: `services_layout`
+ * - **Description**: `ServicesLayout`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ServicesLayoutSlice = prismicT.SharedSlice<"services_layout", ServicesLayoutSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AboutUsDocumentData, AboutUsDocument, AutomationDocumentData, AutomationDocument, ContactsDocumentData, ContactsDocumentDataSlicesSlice, ContactsDocument, DesigningDocumentData, DesigningDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, GalleryDocumentData, GalleryDocument, HomeDocumentData, HomeDocument, ProductionDocumentData, ProductionDocument, RepairDocumentData, RepairDocument, AllDocumentTypes, ContactListSliceDefaultPrimary, ContactListSliceDefault, ContactListSliceVariation, ContactListSlice, FooterLinksSliceDefaultPrimary, FooterLinksSliceDefaultItem, FooterLinksSliceDefault, FooterLinksSliceVariation, FooterLinksSlice };
+        export type { AboutUsDocumentData, AboutUsDocumentDataSlicesSlice, AboutUsDocument, ContactsDocumentData, ContactsDocumentDataSlicesSlice, ContactsDocument, FooterDocumentData, FooterDocumentDataContactCardItem, FooterDocumentDataSlicesSlice, FooterDocument, GalleryDocumentData, GalleryDocumentDataSlicesSlice, GalleryDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, PrivacyDocumentData, PrivacyDocument, ServicesDefaultPageDocumentData, ServicesDefaultPageDocumentDataSlicesSlice, ServicesDefaultPageDocument, AllDocumentTypes, AboutTemplateSliceDefaultPrimary, AboutTemplateSliceDefaultItem, AboutTemplateSliceDefault, AboutTemplateSliceVariation, AboutTemplateSlice, ContactListSliceDefaultPrimary, ContactListSliceDefault, ContactListSliceVariation, ContactListSlice, FooterLinksSliceDefaultPrimary, FooterLinksSliceDefaultItem, FooterLinksSliceDefault, FooterLinksSliceVariation, FooterLinksSlice, GalleryImagesSliceDefaultItem, GalleryImagesSliceDefault, GalleryImagesSliceVariation, GalleryImagesSlice, GalleryItemsSliceDefaultPrimary, GalleryItemsSliceDefaultItem, GalleryItemsSliceDefault, GalleryItemsSliceVariation, GalleryItemsSlice, HeadersSliceDefaultPrimary, HeadersSliceDefault, HeadersSliceVariation, HeadersSlice, ServicesItemsSliceDefaultPrimary, ServicesItemsSliceDefaultItem, ServicesItemsSliceDefault, ServicesItemsSliceVariation, ServicesItemsSlice, ServicesLayoutSliceDefaultPrimary, ServicesLayoutSliceDefault, ServicesLayoutSliceVariation, ServicesLayoutSlice };
     }
 }

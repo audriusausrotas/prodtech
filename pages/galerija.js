@@ -8,10 +8,10 @@ export default function gallery({ footer, page }) {
   return (
     <>
       <Head>
-        {/* <title>{page.data.meta_title}</title>
-        <meta name="description" content={page.data.meta_description} /> */}
+        <title>{page.data.seo_title}</title>
+        <meta name="description" content={page.data.seo_description} />
       </Head>
-      <GalleryMain />
+      <GalleryMain images={page.data.slices[0].items} />
       <Footer data={footer.data} />
     </>
   );
@@ -20,12 +20,12 @@ export default function gallery({ footer, page }) {
 export async function getStaticProps({ locale }) {
   locale === "en" && (locale = "en-eu");
   const client = prismic.createClient(sm.apiEndpoint);
-  // const page = await client.getByUID("gallery", "gallery", { lang: locale });
+  const page = await client.getByUID("gallery", "gallery", { lang: locale });
   const footer = await client.getByUID("footer", "footer", { lang: locale });
 
   return {
     props: {
-      // page,
+      page,
       footer,
     },
   };

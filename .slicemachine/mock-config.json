@@ -5,10 +5,8 @@
     "gallery": {},
     "contacts": {},
     "about_us": {},
-    "designing": {},
-    "production": {},
-    "automation": {},
-    "repair": {}
+    "services_default_page": {},
+    "privacy": {}
   },
   "slices": {
     "FooterLinks": {
@@ -17,6 +15,38 @@
       }
     },
     "ContactList": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Headers": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "AboutTemplate": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "GalleryImages": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ServicesItems": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "GalleryItems": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "ServicesLayout": {
       "default": {
         "primary": {}
       }

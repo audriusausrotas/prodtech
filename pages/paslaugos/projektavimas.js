@@ -1,4 +1,4 @@
-import DesigningMain from "@/Components/Components/Services/Designing/DesigningMain";
+import ServicesDefaultPage from "@/Components/Components/Services/ServicesDefaultPage";
 import * as prismic from "@prismicio/client";
 import sm from "../../sm.json";
 import Footer from "@/Components/Components/Layout/Footer/Footer";
@@ -8,10 +8,10 @@ export default function designing({ footer, page }) {
   return (
     <>
       <Head>
-        {/* <title>{page.data.meta_title}</title>
-        <meta name="description" content={page.data.meta_description} /> */}
+        <title>{page.data.seo_title}</title>
+        <meta name="description" content={page.data.seo_description} />
       </Head>
-      <DesigningMain />
+      <ServicesDefaultPage data={page.data} />
       <Footer data={footer.data} />
     </>
   );
@@ -20,12 +20,14 @@ export default function designing({ footer, page }) {
 export async function getStaticProps({ locale }) {
   locale === "en" && (locale = "en-eu");
   const client = prismic.createClient(sm.apiEndpoint);
-  // const page = await client.getByUID("designing", "designing", { lang: locale });
+  const page = await client.getByUID("services_default_page", "designing", {
+    lang: locale,
+  });
   const footer = await client.getByUID("footer", "footer", { lang: locale });
 
   return {
     props: {
-      // page,
+      page,
       footer,
     },
   };

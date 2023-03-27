@@ -34,6 +34,13 @@
           "placeholder": ""
         }
       },
+      "privacy_name": {
+        "type": "Text",
+        "config": {
+          "label": "Privacy Name",
+          "placeholder": ""
+        }
+      },
       "privacy_link": {
         "type": "Text",
         "config": {
@@ -46,6 +53,42 @@
         "config": {
           "label": "copyright",
           "placeholder": ""
+        }
+      },
+      "contact_card": {
+        "type": "Group",
+        "config": {
+          "label": "Contact Card",
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "Title",
+                "placeholder": ""
+              }
+            },
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "Text",
+                "placeholder": ""
+              }
+            },
+            "button_name": {
+              "type": "Text",
+              "config": {
+                "label": "Button Name",
+                "placeholder": ""
+              }
+            },
+            "button_link": {
+              "type": "Text",
+              "config": {
+                "label": "Button Link",
+                "placeholder": ""
+              }
+            }
+          }
         }
       },
       "slices": {

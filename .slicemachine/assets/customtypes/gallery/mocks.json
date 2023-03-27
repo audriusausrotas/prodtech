@@ -1,16 +1,61 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "question"
+    "value": "hide"
   },
-  "title": {
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "gallery_images$7aea679a-4d77-49cd-898d-7b71c8b307a2",
+        "name": "gallery_images",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "image",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+                      "width": 12288,
+                      "height": 16384
+                    },
+                    "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+                    "width": 12288,
+                    "height": 16384,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "seo_title": {
     "__TYPE__": "FieldContent",
-    "value": "toward",
+    "value": "shinning",
     "type": "Text"
   },
-  "description": {
+  "seo_description": {
     "__TYPE__": "FieldContent",
-    "value": "bee",
+    "value": "point",
     "type": "Text"
   }
 }

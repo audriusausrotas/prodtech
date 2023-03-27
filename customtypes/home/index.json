@@ -8,23 +8,43 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "home",
+          "label": "UID",
           "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "headers": {
+              "type": "SharedSlice"
+            },
+            "about_template": {
+              "type": "SharedSlice"
+            },
+            "services_items": {
+              "type": "SharedSlice"
+            },
+            "gallery_items": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },
     "SEO": {
-      "title": {
+      "seo_title": {
         "type": "Text",
         "config": {
-          "label": "Title",
+          "label": "SEO Title",
           "placeholder": ""
         }
       },
-      "description": {
+      "seo_description": {
         "type": "Text",
         "config": {
-          "label": "Description",
+          "label": "SEO Description",
           "placeholder": ""
         }
       }

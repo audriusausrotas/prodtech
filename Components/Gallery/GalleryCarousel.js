@@ -1,9 +1,12 @@
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { IoMdCloseCircle } from "react-icons/io";
+import Image from "next/image";
 
 export default function GalleryCarousel({
   image,
+  id,
+  total,
   closeHandler,
   nextHandler,
   prevHandler,
@@ -11,9 +14,15 @@ export default function GalleryCarousel({
   return (
     <div className="fixed top-0 left-0 z-50 flex w-full h-screen bg-white select-none scroll ">
       <div className="relative m-auto pointer-events-none shadow-s1 rounded-xl">
-        <img src={image} alt="" className=" object-contain h-[70%]    " />
+        <Image
+          src={image.url}
+          alt={image.alt}
+          width={image.dimensions.width}
+          height={image.dimensions.height}
+          className=" object-contain h-[70%]    "
+        />
         <div className="absolute text-2xl font-bold text-white opacity-80 top-2 right-4">
-          {image?.slice(-6)}
+          {id + 1 + " / " + total}
         </div>
       </div>
       <IoIosArrowDropleftCircle

@@ -1,17 +1,17 @@
-import RepairMain from "@/Components/Components/Services/Repair/RepairMain";
 import * as prismic from "@prismicio/client";
 import sm from "../../sm.json";
 import Footer from "@/Components/Components/Layout/Footer/Footer";
 import Head from "next/head";
+import ServicesDefaultPage from "@/Components/Components/Services/ServicesDefaultPage";
 
 export default function repair({ footer, page }) {
   return (
     <>
       <Head>
-        {/* <title>{page.data.meta_title}</title>
-        <meta name="description" content={page.data.meta_description} /> */}
+        <title>{page.data.seo_title}</title>
+        <meta name="description" content={page.data.seo_description} />
       </Head>
-      <RepairMain />
+      <ServicesDefaultPage data={page.data} />
       <Footer data={footer.data} />
     </>
   );
@@ -20,12 +20,14 @@ export default function repair({ footer, page }) {
 export async function getStaticProps({ locale }) {
   locale === "en" && (locale = "en-eu");
   const client = prismic.createClient(sm.apiEndpoint);
-  // const page = await client.getByUID("repair", "repair", { lang: locale });
+  const page = await client.getByUID("services_default_page", "repair", {
+    lang: locale,
+  });
   const footer = await client.getByUID("footer", "footer", { lang: locale });
 
   return {
     props: {
-      // page,
+      page,
       footer,
     },
   };

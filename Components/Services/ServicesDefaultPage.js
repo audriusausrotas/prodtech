@@ -1,35 +1,43 @@
 import ServicesPicture from "./ServicesPicture";
-import ServicesText from "./ServicesText";
+import Image from "next/image";
+import PostsTitles from "../Components/PostsTitles";
 
-export default function ServicesDefaultPage() {
+export default function ServicesDefaultPage({ data }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="flex flex-col gap-20 m-auto ">
-        <img
-          src="/servicesHeader.jpg"
-          alt=""
-          className="object-contain object-cover object-center w-full h-[430px]"
+      <div className="flex flex-col gap-20 m-auto w-full max-w-[1440px] ">
+        <Image
+          priority
+          src={data.image.url}
+          alt={data.image.alt}
+          width={data.image.dimensions.width}
+          height={data.image.dimensions.height}
+          className="object-cover object-center w-full h-[430px]"
         />
 
-        <div className="flex flex-col gap-4 px-20 ">
-          <div className="flex items-center gap-2 m-auto text-2xl before:flex before:w-8 before:h-1 before:bg-secondary sm:m-0">
-            Our Services
+        <div className="flex flex-col  gap-4 px-[5%] text-center xl:text-start">
+          <div className="flex items-center justify-center gap-2 text-2xl capitalize xl:justify-start before:flex before:w-8 before:h-1 before:bg-secondary ">
+            {data.title}
           </div>
-          <div className="text-5xl font-semibold">Designing</div>
+          <div className="text-5xl font-semibold capitalize">{data.text}</div>
         </div>
       </div>
-      <div className="w-full ">
-        <div className="flex justify-between m-auto max-w-[1440px] gap-4 py-28  px-20">
-          <ServicesPicture shadow={true} />
-          <ServicesText title="Industrial Equipment Design" />
+
+      {data.slices.map((item, index) => (
+        <div className="w-full odd:bg-primary odd:text-white" key={index}>
+          <div
+            className={`flex flex-col  justify-around m-auto max-w-[1440px] gap-10 sm:gap-20 xl:gap-8 py-20 px-4 ${
+              index % 2 === 0 ? "xl:flex-row" : "xl:flex-row-reverse"
+            } `}
+          >
+            <ServicesPicture
+              data={item.primary.image}
+              shadow={index % 2 === 0 ? true : false}
+            />
+            <PostsTitles data={item.primary} />
+          </div>
         </div>
-      </div>
-      <div className="z-0 w-full text-white bg-primary">
-        <div className="flex justify-between m-auto max-w-[1440px] gap-4 py-28 px-20">
-          <ServicesText title="Production Technology Development and Process Optimization" />
-          <ServicesPicture shadow={false} />
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

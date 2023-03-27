@@ -26,7 +26,7 @@ export default function Navigation() {
   }, [language]);
 
   return (
-    <div className="sticky top-0 z-50 bg-primary">
+    <div className="sticky top-0 z-50 select-none bg-primary">
       <div className="max-w-[1440px] h-24 m-auto flex items-center  text-white justify-around ">
         <HamburgerMenu language={language} />
         <Link passHref href="/">
@@ -38,7 +38,7 @@ export default function Navigation() {
           />
         </Link>
 
-        <div className="flex gap-12 lg:gap-20">
+        <div className="flex xl:gap-16 lg:gap-8">
           <div className="hidden lg:flex">
             <Menu language={language} />
           </div>

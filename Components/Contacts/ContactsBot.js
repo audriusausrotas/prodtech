@@ -3,9 +3,9 @@ import ConntactContacts from "./ConntactContacts";
 
 export default function ContactsBot({ data }) {
   return (
-    <div className="flex flex-col items-center gap-20 px-4 py-20 text-center sm:justify-around xl:gap-8 xl:flex-row xl:items-start sm:px-0">
-      <div className="flex flex-col xl:mt-8 gap-14 ">
-        <div className="flex flex-col gap-4 ">
+    <div className="flex flex-col items-center gap-20 py-20 text-center sm:text-start md:px-4 sm:justify-around xl:gap-8 xl:flex-row xl:items-start sm:px-0">
+      <div className="flex flex-col xl:mt-8 gap-14">
+        <div className="flex flex-col gap-4">
           <p className="flex items-center gap-2 m-auto text-2xl before:flex before:w-8 before:h-1 before:bg-secondary sm:m-0">
             {data.short_text}
           </p>
