@@ -12,7 +12,7 @@ export default function Header({ data }) {
         height={data.image.dimensions.height}
         className="absolute top-0 left-0 object-cover object-center w-full h-full"
       />
-      <div className="z-10 w-full px-8 text-6xl font-bold leading-snug text-center lg:px-40">
+      <div className="z-10 w-full px-8 text-5xl font-bold leading-snug text-center sm:text-6xl lg:px-40">
         {data.header}
       </div>
       <div className="z-10 text-2xl font-semibold">{data.text}</div>
