@@ -14,7 +14,7 @@ export default function ServicesItem({ data }) {
       />
       <Link
         href={data.item_link}
-        className="flex items-center justify-between w-full py-3 text-xl text-white capitalize border-2 rounded-b-lg cursor-pointer group px-7 border-onHover hover:bg-onHover bg-primary"
+        className="flex items-center justify-between w-full px-6 py-3 text-xl text-white capitalize border-2 rounded-b-lg cursor-pointer group border-onHover hover:bg-onHover bg-primary"
       >
         {data.item_title}
         <div className="text-onHover hover:text-primary group-hover:text-primary">
