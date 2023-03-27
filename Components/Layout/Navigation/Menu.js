@@ -35,7 +35,7 @@ export default function Menu({ language, open, setOpen }) {
       : [...menuItems[1].items];
 
   return (
-    <div className="absolute left-0 flex flex-col w-2/3 overflow-hidden text-xl capitalize rounded-br-lg select-none lg:w-auto bg-gray2 lg:flex-row lg:gap-16 lg:static top-24 lg:bg-primary">
+    <div className="absolute left-0 flex flex-col w-full overflow-hidden text-xl capitalize rounded-br-lg select-none sm:w-2/3 lg:w-full bg-gray2 lg:flex-row lg:gap-16 lg:static top-24 lg:bg-primary">
       {menu.map((item) =>
         item.subMenu ? (
           <div key={item.title}>

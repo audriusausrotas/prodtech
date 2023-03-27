@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Privacymain({ data }) {
   return (
-    <div className="max-w-[1440px] mx-auto my-20 flex flex-col gap-2  text-justify">
+    <div className="max-w-[1440px] mx-auto my-20 flex flex-col gap-2 px-4 text-justify">
       {data.map((item, index) => (
         <div typeof={item.type} key={index}>
           {item.type === "heading1" && (

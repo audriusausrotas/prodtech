@@ -24,7 +24,7 @@ export default function SubMenu({
           key={item.title}
           onClick={closeMenus}
           href={item.link}
-          className="flex items-center lg:justify-between gap-2 px-4 py-2 rounded-md hover:bg-onHover w- min-w-[20rem]"
+          className="flex items-center gap-2 px-4 py-2 rounded-md lg:justify-between hover:bg-onHover "
         >
           {open && <FaCircle size={10} />}
           {item.title}
