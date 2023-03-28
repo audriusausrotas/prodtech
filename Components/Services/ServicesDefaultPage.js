@@ -12,14 +12,14 @@ export default function ServicesDefaultPage({ data }) {
           alt={data.image.alt}
           width={data.image.dimensions.width}
           height={data.image.dimensions.height}
-          className="object-cover object-center w-full h-[430px]"
+          className="object-cover object-center w-full h-[430px] rounded-b-lg"
         />
 
         <div className="flex flex-col  gap-4 px-[5%] text-center xl:text-start">
-          <div className="flex items-center justify-center gap-2 text-2xl capitalize xl:justify-start before:flex before:w-8 before:h-1 before:bg-secondary ">
+          <h5 className="flex items-center justify-center gap-2 text-2xl capitalize xl:justify-start before:flex before:w-8 before:h-1 before:bg-secondary ">
             {data.title}
-          </div>
-          <div className="text-5xl font-semibold capitalize">{data.text}</div>
+          </h5>
+          <h2 className="text-5xl font-semibold capitalize">{data.text}</h2>
         </div>
       </div>
 

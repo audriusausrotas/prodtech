@@ -1,9 +1,49 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
+  const schemaData = {
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    name: "prodtech",
+    url: "https://prodtech.lt",
+    logo: "https://prodtech.lt/logo.png",
+    description:
+      "Prodtech - CNC Tekinimas, Frezavimas, Degalių gamyba, automatizavimas, robotizavimas",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Pasagų g. 4",
+      addressLocality: "Riešės k",
+      addressRegion: "Vilniaus r.",
+      postalCode: "LT-14265",
+      addressCountry: "Lietuva",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+370 620 87532",
+      email: "info@prodtech.lt",
+    },
+  };
+
   return (
     <Html lang="lt">
       <Head />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      {/* <meta
+        name="google-site-verification"
+        content="qppZOOy2pWf1pTQ4ViD_5nL_2V4xA3IP5BQCde6tBYc"
+      />
+      <meta
+        name="ahrefs-site-verification"
+        content="f7527cada7672808a6be9dd5596d0503aec65c98ade66ab5968823a4abada74b"
+      ></meta> */}
+      <meta
+        name="keywords"
+        content="CNC Tekinimas, CNC Frezavimas, CNC Projektavimas, CNC Degalių gamyba, Automatika, Servisas, Garantinis remontas, Robotizavimas"
+      />
       <body>
         <Main />
         <NextScript />

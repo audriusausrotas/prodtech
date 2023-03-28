@@ -30,12 +30,7 @@ export default function Navigation() {
       <div className="max-w-[1440px] h-24 m-auto flex items-center  text-white justify-around ">
         <HamburgerMenu language={language} />
         <Link passHref href="/">
-          <Image
-            src="/logo small.png"
-            alt="Prodtech logo"
-            width={200}
-            height={83}
-          />
+          <Image src="/logo.png" alt="Prodtech logo" width={200} height={83} />
         </Link>
 
         <div className="flex xl:gap-16 lg:gap-8">

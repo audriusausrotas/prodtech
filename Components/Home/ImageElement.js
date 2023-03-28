@@ -11,7 +11,7 @@ export default function ImageElement({ data }) {
         height={data.gallery_image.dimensions.height}
         className="object-cover object-center w-full h-full rounded-lg"
       />
-      <div className="absolute top-1/2 left-1/2 translate-x-[-50%]  opacity-90  invisible group-hover:visible ">
+      <div className="absolute invisible -translate-x-1/2 top-1/2 left-1/2 opacity-90 group-hover:visible ">
         <Button link={data.gallery_link} name={data.link_name} />
       </div>
     </div>

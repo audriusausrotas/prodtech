@@ -10,12 +10,12 @@ export default function Header({ data }) {
         alt={data.image.alt}
         width={data.image.dimensions.width}
         height={data.image.dimensions.height}
-        className="absolute top-0 left-0 object-cover object-center w-full h-full"
+        className="absolute top-0 left-0 object-cover object-center w-full h-full rounded-b-lg"
       />
-      <div className="z-10 w-full px-4 text-5xl font-bold leading-snug text-center sm:text-6xl lg:px-40">
+      <h1 className="z-10 w-full px-4 text-5xl font-bold leading-snug text-center sm:text-6xl lg:px-40">
         {data.header}
-      </div>
-      <div className="z-10 text-2xl font-semibold">{data.text}</div>
+      </h1>
+      <h4 className="z-10 text-2xl font-semibold">{data.text}</h4>
       <IoIosArrowDropdownCircle size={60} />
     </div>
   );

@@ -1,0 +1,4 @@
+Sitemap: https://prodtech.lt/api/sitemap
+
+User-agent: *
+Allow: *
