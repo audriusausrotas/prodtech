@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import Link from "next/link";
 import Menu from "./Menu";
 import LanguageSelect from "./LanguageSelect";
 import HamburgerMenu from "./HamburgerMenu";
+import Logo from "../../../public/logo.svg";
+
 export default function Navigation() {
   const router = useRouter();
   const [language, setLanguage] = useState("LT");
@@ -29,12 +30,7 @@ export default function Navigation() {
       <div className="max-w-[1440px] h-24 m-auto flex items-center  text-white justify-around ">
         <HamburgerMenu language={language} />
         <Link passHref href="/">
-          <Image
-            src="/logo_small.png"
-            alt="Prodtech logo"
-            width={200}
-            height={83}
-          />
+          <Logo className="w-44 " />
         </Link>
 
         <div className="flex xl:gap-16 lg:gap-8">

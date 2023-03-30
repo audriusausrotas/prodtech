@@ -1,21 +1,15 @@
 import FooterTab from "./FooterTab";
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "../../../public/logo.svg";
 
 export default function Footer({ data }) {
   return (
     <div className="flex flex-col items-center text-lg text-white bg-primary">
       <div className="max-w-[1440px] w-full py-20 md:py-8 flex justify-around items-end gap-4 xl:text-left text-center flex-wrap">
         <div className=" w-fit">
-          <div className="h-28 ">
+          <div className="flex items-center h-28">
             <Link passHref href="/">
-              <Image
-                src={data.logo.url}
-                alt={data.logo.alt}
-                className="object-contain w-full h-full"
-                width={data.logo.dimensions.width}
-                height={data.logo.dimensions.height}
-              />
+              <Logo className="w-60" />
             </Link>
           </div>
           <div className="gap-1">
