@@ -3,14 +3,14 @@ import GalleryCarousel from "./GalleryCarousel";
 import { useState } from "react";
 
 export default function GalleryMain({ images }) {
-  const [image, setImage] = useState(100000);
+  const [image, setImage] = useState("");
 
   function clickHandler(e) {
-    setImage(e.target.id);
+    setImage(+e.target.id);
   }
 
   function closeHandler() {
-    setImage(100000);
+    setImage("");
   }
 
   function nextHandler() {
@@ -25,7 +25,7 @@ export default function GalleryMain({ images }) {
 
   return (
     <>
-      {image !== 100000 ? (
+      {image !== "" && (
         <GalleryCarousel
           image={images[image].image}
           id={image}
@@ -34,18 +34,18 @@ export default function GalleryMain({ images }) {
           nextHandler={nextHandler}
           prevHandler={prevHandler}
         />
-      ) : (
-        <div className="flex justify-center flex-wrap gap-4 max-w-[1440px] mx-auto my-8 lg:my-20 px-4">
-          {images.map((item, index) => (
-            <GalleryImage
-              key={index}
-              id={index}
-              data={item}
-              clickHandler={clickHandler}
-            />
-          ))}
-        </div>
       )}
+
+      <div className="flex justify-center flex-wrap gap-4 max-w-[1440px] mx-auto my-8 lg:my-20 px-4">
+        {images.map((item, index) => (
+          <GalleryImage
+            key={index}
+            id={index}
+            data={item}
+            clickHandler={clickHandler}
+          />
+        ))}
+      </div>
     </>
   );
 }

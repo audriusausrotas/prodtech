@@ -1,6 +1,7 @@
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { IoMdCloseCircle } from "react-icons/io";
+import { IoCloseSharp } from "react-icons/io5";
 import Image from "next/image";
 
 export default function GalleryCarousel({
@@ -12,33 +13,35 @@ export default function GalleryCarousel({
   prevHandler,
 }) {
   return (
-    <div className="fixed top-0 left-0 z-50 flex w-full h-screen bg-white select-none scroll ">
-      <div className="relative m-auto pointer-events-none shadow-s1 rounded-xl">
+    <div className="fixed top-0 left-0 z-50 flex flex-col items-center justify-center w-full h-full p-24 select-none backdrop-blur backdrop-brightness-50">
+      <div className="relative max-h-full w-fit ">
+        <div className="absolute flex self-end gap-8 text-2xl font-bold text-white top-2 right-4 opacity-80 ">
+          {+id + 1 + " / " + total}
+        </div>
+        <IoCloseSharp
+          size={40}
+          onClick={closeHandler}
+          className="absolute right-0 p-1 text-white transition-transform duration-300 rounded-full cursor-pointer hover:text-secondary hover:border-2 hover:rotate-90 hover:scale-90 -top-12"
+        />
+
         <Image
           src={image.url}
           alt={image.alt}
           width={image.dimensions.width}
           height={image.dimensions.height}
-          className=" object-contain h-[70%]    "
+          className="object-contain max-h-full w-fit rounded-xl shadow-s1"
         />
-        <div className="absolute text-2xl font-bold text-white opacity-80 top-2 right-4">
-          {id + 1 + " / " + total}
-        </div>
       </div>
+
       <IoIosArrowDropleftCircle
         size={60}
         onClick={prevHandler}
-        className="absolute transition-all rounded-full cursor-pointer top-1/2 hover:scale-110 left-[10%] hover:text-secondary text-gray1"
+        className="absolute text-white transition-all rounded-full cursor-pointer left-8 top-1/2 hover:scale-90 hover:text-secondary"
       />
       <IoIosArrowDroprightCircle
         size={60}
         onClick={nextHandler}
-        className="absolute transition-all cursor-pointer hover:scale-110 top-1/2 hover:text-secondary right-[10%] text-gray1"
-      />
-      <IoMdCloseCircle
-        size={60}
-        onClick={closeHandler}
-        className="absolute transition-all rounded-full cursor-pointer hover:text-secondary hover:scale-110 top-10 right-10 text-gray1"
+        className="absolute text-white transition-all cursor-pointer hover:scale-90 top-1/2 hover:text-secondary right-8"
       />
     </div>
   );
