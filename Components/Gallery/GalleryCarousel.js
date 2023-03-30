@@ -12,9 +12,17 @@ export default function GalleryCarousel({
   nextHandler,
   prevHandler,
 }) {
+  function click(e) {
+    e.target.id === "out" && closeHandler();
+  }
+
   return (
-    <div className="fixed top-0 left-0 z-50 flex flex-col items-center justify-center w-full h-full p-24 select-none backdrop-blur backdrop-brightness-50">
-      <div className="relative max-h-full w-fit ">
+    <div
+      className="fixed top-0 left-0 z-50 flex flex-col items-center justify-center w-full h-full p-24 select-none backdrop-blur backdrop-brightness-50"
+      onClick={click}
+      id="out"
+    >
+      <div className="relative max-h-full w-fit">
         <div className="absolute flex self-end gap-8 text-2xl font-bold text-white top-2 right-4 opacity-80 ">
           {+id + 1 + " / " + total}
         </div>
