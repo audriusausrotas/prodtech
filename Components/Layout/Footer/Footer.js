@@ -9,7 +9,7 @@ export default function Footer({ data }) {
         <div className=" w-fit">
           <div className="flex items-center h-28">
             <Link passHref href="/">
-              <Logo className="w-60" />
+              <Logo className="w-60 h-fit" />
             </Link>
           </div>
           <div className="gap-1">

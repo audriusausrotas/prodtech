@@ -30,7 +30,7 @@ export default function Navigation() {
       <div className="max-w-[1440px] h-24 m-auto flex items-center  text-white justify-around ">
         <HamburgerMenu language={language} />
         <Link passHref href="/">
-          <Logo className="w-44 " />
+          <Logo className="w-44 h-fit" />
         </Link>
 
         <div className="flex xl:gap-16 lg:gap-8">
