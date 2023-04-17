@@ -13,12 +13,14 @@ export default function AboutMain({ data, card }) {
           key={index}
         >
           <div
-            className={`max-w-[1440px] justify-around flex gap-4 flex-col xl:flex-row m-auto ${
+            className={`max-w-[1440px]  justify-around flex gap-4 flex-col xl:flex-row m-auto ${
               index % 2 === 0 ? "xl:flex-row" : "xl:flex-row-reverse"
             }`}
           >
+            <div className="self-center">
+              <PostsTitles data={item.primary} />
+            </div>
             <ImageContainer data={item.items} />
-            <PostsTitles data={item.primary} />
           </div>
         </div>
       ))}

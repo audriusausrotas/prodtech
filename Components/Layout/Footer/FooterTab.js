@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function FooterTab({ data }) {
   return (
     <div
-      className={`flex-col gap-4 w-fit hidden max-w-[244px] ${
+      className={`flex-col gap-4 w-fit hidden self-baseline max-w-[244px] ${
         data.items[0].link === "/kontaktai" ? "sm:flex" : "xl:flex"
       }`}
     >

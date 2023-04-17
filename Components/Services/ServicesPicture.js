@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function ServicesPicture({ shadow, data }) {
   return (
-    <div className="relative hidden xs:block">
+    <div className="relative self-center hidden xs:block sm:h-fit">
       <div
-        className={`xl:w-[600px] h-[400px] rounded-lg overflow-hidden flex ${
+        className={`xl:w-[600px] h-[400px] rounded-lg  overflow-hidden flex ${
           shadow ? "shadow-ms" : ""
         }`}
       >
