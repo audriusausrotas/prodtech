@@ -16,10 +16,10 @@ export default function ServicesDefaultPage({ data }) {
         />
 
         <div className="flex flex-col  gap-4 px-[5%] text-center xl:text-start">
-          <h5 className="flex items-center justify-center gap-2 text-2xl capitalize xl:justify-start before:flex before:w-8 before:h-1 before:bg-secondary ">
+          <h5 className="flex items-center justify-center gap-2 text-2xl xl:justify-start before:flex before:w-8 before:h-1 before:bg-secondary ">
             {data.title}
           </h5>
-          <h2 className="text-5xl font-semibold capitalize">{data.text}</h2>
+          <h2 className="text-5xl font-semibold ">{data.text}</h2>
         </div>
       </div>
 

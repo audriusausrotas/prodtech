@@ -3,7 +3,7 @@ import PostsTitles from "../Components/PostsTitles";
 
 export default function GallerySection({ data }) {
   return (
-    <div className="max-w-[1440px] capitalize m-auto py-20 px-4 flex flex-col gap-12 ">
+    <div className="max-w-[1440px] m-auto py-20 px-4 flex flex-col gap-12 ">
       <PostsTitles data={data.primary} />
 
       <div className="flex flex-col justify-between gap-8 sm:flex-row">
