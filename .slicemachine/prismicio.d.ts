@@ -620,13 +620,13 @@ interface AboutTemplateSliceDefaultPrimary {
     /**
      * Text field in *AboutTemplate → Primary*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: about_template.primary.text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **API ID Path**: about_template.primary.text2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    text: prismicT.KeyTextField;
+    text2: prismicT.RichTextField;
 }
 /**
  * Item in AboutTemplate → Items
@@ -1077,13 +1077,13 @@ interface ServicesLayoutSliceDefaultPrimary {
     /**
      * Text field in *ServicesLayout → Primary*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: services_layout.primary.text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **API ID Path**: services_layout.primary.text2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    text: prismicT.KeyTextField;
+    text2: prismicT.RichTextField;
     /**
      * Button Name field in *ServicesLayout → Primary*
      *

@@ -25,11 +25,13 @@
             "placeholder": ""
           }
         },
-        "text": {
-          "type": "Text",
+        "text2": {
+          "type": "StructuredText",
           "config": {
             "label": "Text",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading2,heading3,heading4,heading5,heading6,list-item,o-list-item"
           }
         }
       },

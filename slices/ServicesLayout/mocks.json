@@ -9,7 +9,6 @@
         "type": "Text"
       },
       "image": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
@@ -27,12 +26,10 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
-      },
-      "text": {
-        "__TYPE__": "FieldContent",
-        "value": "led",
-        "type": "Text"
       },
       "button_name": {
         "__TYPE__": "FieldContent",
@@ -43,6 +40,17 @@
         "__TYPE__": "FieldContent",
         "value": "greater",
         "type": "Text"
+      },
+      "text2": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Reprehenderit sit proident sit pariatur ea dolore anim do pariatur. Minim eu nostrud et minim nisi laborum tempor nostrud aliquip ipsum."
+            }
+          }
+        ]
       }
     },
     "items": [
