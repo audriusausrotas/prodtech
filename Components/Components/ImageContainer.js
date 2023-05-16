@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function ImageContainer({ data }) {
   const cssClasses = [
-    "absolute top-0 left-0 rounded-lg w-[400px] max-h-[500px]",
-    "absolute rounded-lg left-60 top-80",
-    "absolute rounded-lg top-[435px] left-12",
+    "absolute top-0 left-0 rounded-lg w-[350px] h-[400px] object-cover ",
+    "absolute rounded-lg left-60 top-44 object-cover w-[260px] h-[350px] ",
+    "absolute rounded-lg top-[350px] left-12 object-cover w-[350px] h-[220px]  ",
   ];
 
   return (
@@ -15,8 +15,8 @@ export default function ImageContainer({ data }) {
             key={index}
             src={item.image.url}
             alt={item.image.alt}
-            width={item.image.dimensions.width}
-            height={item.image.dimensions.height}
+            width={index === 0 ? "350" : index === 1 ? "260" : "350"}
+            height={index === 0 ? "400" : index === 1 ? "350" : "220"}
             className={cssClasses[index]}
           />
         ))}
