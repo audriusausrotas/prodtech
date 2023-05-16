@@ -5,7 +5,7 @@ import PostsTitles from "../Components/PostsTitles";
 
 export default function AboutMain({ data, card }) {
   return (
-    <div className="flex flex-col m-auto ">
+    <div className="flex flex-col pt-20 m-auto">
       <AboutHeader data={data} />
       {data.slices.map((item, index) => (
         <div
