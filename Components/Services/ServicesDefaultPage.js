@@ -12,7 +12,7 @@ export default function ServicesDefaultPage({ data }) {
           alt={data.image.alt}
           width={data.image.dimensions.width}
           height={data.image.dimensions.height}
-          className="object-cover object-center w-full h-[430px] rounded-b-lg"
+          className="object-cover object-center w-full h-[430px]  rounded-b-lg"
         />
 
         <div className="flex flex-col  gap-4 px-[5%] text-center xl:text-start">

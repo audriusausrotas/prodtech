@@ -13,7 +13,7 @@ export default function ServicesPicture({ shadow, data }) {
           alt={data.alt}
           width={data.dimensions.width}
           height={data.dimensions.width}
-          className="z-10 object-cover object-center w-full h-full"
+          className="z-10 object-cover object-center h-full min-w-full"
         />
       </div>
       <div className="absolute z-0 w-32 h-32 rounded-lg -top-2 -left-2 bg-secondary "></div>
