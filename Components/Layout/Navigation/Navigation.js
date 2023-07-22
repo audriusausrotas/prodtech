@@ -37,7 +37,7 @@ export default function Navigation() {
           <div className="hidden lg:flex">
             <Menu language={language} />
           </div>
-          <LanguageSelect language={language} setLanguage={setLanguage} />
+          {/* <LanguageSelect language={language} setLanguage={setLanguage} /> */}
         </div>
       </div>
     </div>

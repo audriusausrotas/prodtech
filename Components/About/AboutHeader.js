@@ -23,3 +23,7 @@ export default function AboutHeader({ data }) {
     </div>
   );
 }
+
+
+
+
