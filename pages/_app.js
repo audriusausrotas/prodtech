@@ -5,7 +5,7 @@ import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "../prismicio";
 import Head from "next/head";
-// import GoogleAnalytics from "@bradgarropy/next-google-analytics";
+import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      {/* <GoogleAnalytics measurementId="G-QPQYS0TKC7" /> */}
+      <GoogleAnalytics measurementId="G-HYQ25H1PPD" />
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
         <PrismicPreview repositoryName={repositoryName}>
           <Navigation />

@@ -13,8 +13,8 @@ export default function Footer({ data }) {
             </Link>
           </div>
           <div className="gap-1">
-            <h5>{data.vat_code}</h5>
-            <h5>{data.company_name}</h5>
+            <h4>{data.vat_code}</h4>
+            <h4>{data.company_name}</h4>
             <Link href={data.privacy_link} className="hover:text-onHover">
               {data.privacy_name}
             </Link>
