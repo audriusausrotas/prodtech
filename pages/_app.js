@@ -5,7 +5,7 @@ import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "../prismicio";
 import Head from "next/head";
-import GoogleAnalytics from "@bradgarropy/next-google-analytics";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export default function App({ Component, pageProps }) {
   return (
