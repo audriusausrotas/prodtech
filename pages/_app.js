@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <GoogleAnalytics gaMeasurementId />
+      <GoogleAnalytics gaMeasurementId="G-HYQ25H1PPD" />
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
         <PrismicPreview repositoryName={repositoryName}>
           <Navigation />
