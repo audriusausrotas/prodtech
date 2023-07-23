@@ -32,14 +32,10 @@ export default function Document() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      {/* <meta
-        name="google-site-verification"
-        content="qppZOOy2pWf1pTQ4ViD_5nL_2V4xA3IP5BQCde6tBYc"
-      />
       <meta
-        name="ahrefs-site-verification"
-        content="f7527cada7672808a6be9dd5596d0503aec65c98ade66ab5968823a4abada74b"
-      ></meta> */}
+        name="google-site-verification"
+        content="krs1JlkdKAnsKNlcEw7_ydCX2EOmSjt1UgJNhPkNIB4"
+      />
       <meta
         name="keywords"
         content="CNC Tekinimas, CNC Frezavimas, CNC Projektavimas, CNC Degalių gamyba, Automatika, Servisas, Garantinis remontas, Robotizavimas"
