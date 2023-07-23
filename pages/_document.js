@@ -32,10 +32,7 @@ export default function Document() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta
-        name="google-site-verification"
-        content="krs1JlkdKAnsKNlcEw7_ydCX2EOmSjt1UgJNhPkNIB4"
-      />
+      
       <meta
         name="keywords"
         content="CNC Tekinimas, CNC Frezavimas, CNC Projektavimas, CNC Degalių gamyba, Automatika, Servisas, Garantinis remontas, Robotizavimas"

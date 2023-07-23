@@ -12,6 +12,10 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="google-site-verification"
+          content="krs1JlkdKAnsKNlcEw7_ydCX2EOmSjt1UgJNhPkNIB4"
+        />
       </Head>
       <GoogleAnalytics measurementId="G-HYQ25H1PPD" />
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
